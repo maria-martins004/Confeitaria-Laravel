@@ -49,7 +49,7 @@ class CadastreSeController extends Controller
         $user = new CadastroUser();
         $user->nome = $request->nome;
         $user->email = $request->email;
-        $user->senha = Hash::make($request->senha . Config::get('app.pepper')); // criptografia segura
+        $user->senha = Hash::make($request->senha); // criptografia segura  . Config::get('app.pepper')
         $user->save();
 
 

@@ -185,6 +185,6 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
-    'pepper' => env('APP_PEPPER'),
+    // 'pepper' => env('APP_PEPPER'),
 
 ];

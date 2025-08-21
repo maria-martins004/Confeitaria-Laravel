@@ -154,6 +154,18 @@ select:focus {
   margin-bottom: 0;
 }
 
+/* .card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-col-md-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
 .card-group {
   display: flex;
   flex-wrap: wrap;
@@ -171,13 +183,8 @@ select:focus {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-}
-
-.card img {
-  max-width: 100%;
-  height: auto;
 }
 
 .card h4 {
@@ -198,7 +205,8 @@ select:focus {
   margin-top: 10px;
   display: flex;
   justify-content: center;
-}
+} */
+
 
 /* ===================== BROWNIE SECTION ===================== */
 .sessao-brownie {
@@ -242,7 +250,8 @@ select:focus {
   left: 200px;
   z-index: 0;
   width: 60px;
-  opacity: 0.5; /* brilho inicial fraco */
+  opacity: 0.5;
+  /* brilho inicial fraco */
   cursor: pointer;
 }
 

@@ -49,8 +49,8 @@ class LoginController extends Controller
         $user = CadastroUser::where('email', $request->email)->first();
 
         // Verifica se usuário existe e senha confere
-        if ($user && Hash::check($request->senha . Config::get('app.pepper'), $user->senha)) {
-            // Salva dados do usuário na sessão
+        if ($user && Hash::check($request->senha, $user->senha)) {
+            // Salva dados do usuário na sessão  . Config::get('app.pepper')
             session(['user_id' => $user->id, 'user_name' => $user->nome]);
 
             return redirect()->route('main2'); //ou para a página inicial após o login

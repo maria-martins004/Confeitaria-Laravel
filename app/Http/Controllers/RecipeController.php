@@ -12,7 +12,6 @@ class RecipeController extends Controller
     public function recipes($id = null){
         $recipes = Recipe::all();
         return view('recipes',['recipes' => $recipes]);
- 
          
     }
 
