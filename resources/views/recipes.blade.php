@@ -1,3 +1,7 @@
+<head>
+    <link rel="stylesheet" href="{{ asset('css/recipes/recipes.css') }}">
+</head>
+
 @extends('layouts.main')
 @section('title', 'recipes')
 @section('content')
