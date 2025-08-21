@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use App\Models\CadastroUser;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Config;
 
 class CadastreSeController extends Controller
 {
@@ -48,7 +49,7 @@ class CadastreSeController extends Controller
         $user = new CadastroUser();
         $user->nome = $request->nome;
         $user->email = $request->email;
-        $user->senha = Hash::make($request->senha); // criptografia segura
+        $user->senha = Hash::make($request->senha . Config::get('app.pepper')); // criptografia segura
         $user->save();
 
 

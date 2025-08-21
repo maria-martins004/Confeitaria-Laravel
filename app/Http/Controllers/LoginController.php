@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\CadastroUser;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Config;
 
 class LoginController extends Controller
 {
@@ -48,7 +49,7 @@ class LoginController extends Controller
         $user = CadastroUser::where('email', $request->email)->first();
 
         // Verifica se usuário existe e senha confere
-        if ($user && Hash::check($request->senha,$user->senha)) {
+        if ($user && Hash::check($request->senha . Config::get('app.pepper'), $user->senha)) {
             // Salva dados do usuário na sessão
             session(['user_id' => $user->id, 'user_name' => $user->nome]);
 
