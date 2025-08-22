@@ -61,3 +61,5 @@ Route::get('/welcome', function () {return view('welcome');})->name('welcome');
 // Rotas usando action - Login Controller
 // use App\Http\Controllers\LoginController;
 // Route::get('/login', [LoginController::class, 'login']);
+
+// Rotas RecipeController -> Criação de receitas
