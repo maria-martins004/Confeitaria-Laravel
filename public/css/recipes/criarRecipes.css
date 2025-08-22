@@ -1,0 +1,42 @@
+.container h1 {
+    font-family: Miniver;
+    font-weight: 400;
+    font-size: 3rem;
+    color: #fd95bd; 
+    margin: 15px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #55156e;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #eec0dc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.btn-enviar {
+    background-color: #fd95bd;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #e673a0;
+}

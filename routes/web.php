@@ -46,6 +46,7 @@ Route::post('/cadastre', [CadastreSeController::class, 'store'])->name('cadastre
 Route::get('/cadastros/{id}', [CadastreSeController::class, 'showCadastro'])->name('cadastre.showCadastro');
 
 use App\Http\Controllers\LoginController;
+use App\Models\Recipe;
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');      // mostra formulário
 Route::post('/login', [LoginController::class, 'store'])->name('login.store'); // processa login
@@ -54,12 +55,9 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout'); // lo
 Route::get('/welcome', function () {return view('welcome');})->name('welcome');
 // Route::get('/main2', [CadastreSeController::class, 'main2'])->name('main2');
 
-
-
-
-
 // Rotas usando action - Login Controller
 // use App\Http\Controllers\LoginController;
 // Route::get('/login', [LoginController::class, 'login']);
 
 // Rotas RecipeController -> Criação de receitas
+Route::get('/criar', [RecipeController::class, 'create']);

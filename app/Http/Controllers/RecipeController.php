@@ -8,22 +8,17 @@ use App\Models\Recipe;
 class RecipeController extends Controller
 {
 
-    
-    public function recipes($id = null){
+
+    public function recipes($id = null)
+    {
         $recipes = Recipe::all();
-        
-        return view('recipes',['recipes' => $recipes]);
-         
+        return view('recipes', ['recipes' => $recipes]);
+    }
+
+    public function create()
+    {
+        return view('recipes.criarReceita'); 
     }
 
     
-
-
-
-  public function create()
-{
-    //add the create reciepe logic 
-}
-
-
 }
