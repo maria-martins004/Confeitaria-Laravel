@@ -61,3 +61,9 @@ Route::get('/welcome', function () {return view('welcome');})->name('welcome');
 
 // Rotas RecipeController -> Criação de receitas
 Route::get('/criar', [RecipeController::class, 'create']);
+Route::get('/criar', [RecipeController::class, 'create'])->name('recipes.create');
+Route::post('/criar', [RecipeController::class, 'store'])->name('recipes.store');
+
+// Rota para exibir as entradas
+
+Route::get('/entrada', [RecipeController::class, 'entradas']);

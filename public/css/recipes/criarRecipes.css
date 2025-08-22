@@ -20,9 +20,9 @@
 .form-group textarea {
     width: 100%;
     padding: 10px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     border: 1px solid #eec0dc;
-    border-radius: 5px;
+    border-radius: 10px;
     resize: vertical;
 }
 

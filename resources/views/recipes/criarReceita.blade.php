@@ -8,7 +8,7 @@
 
     <div class="container">
         <h1><strong>Página de Criação: </strong> Envie a sua Receita.</h1>
-        <form action="" method="post">
+        <form action="{{route('recipes.store')}}" method="post">
             @csrf
             <div class="form-group">
                 <label for="title">Título da Receita</label>

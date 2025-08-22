@@ -42,7 +42,7 @@
                         <a href="/recipes/teste" class="dropbtn">RECEITAS</a>
                         <div class="dropdown-content">
                             <a href="/criar">Criar</a>
-                            <a href="#">Entradas</a>
+                            <a href="/entrada">Entradas</a>
                             <a href="#">Pratos Principais</a>
                             <a href="#">Acompanhamentos</a>
                             <a href="#">Sobremesas</a>

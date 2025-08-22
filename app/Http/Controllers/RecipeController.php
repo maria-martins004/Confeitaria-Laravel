@@ -20,5 +20,29 @@ class RecipeController extends Controller
         return view('recipes.criarReceita'); 
     }
 
-    
+    public function store(Request $request)
+    {
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+            'ingredients' => 'required|string',
+            'instructions' => 'required|string',
+            'rendiment' => 'required|string',
+        ]);
+
+        $recipe = new Recipe();
+        $recipe->title = $request->title;
+        $recipe->description = $request->description;
+        $recipe->ingredients = $request->ingredients;
+        $recipe->prepare_mode = $request->prepare_mode;
+        $recipe->rendiment = $request->rendiment;
+        $recipe->save();
+
+        return redirect()->route('recipes')->with('success', 'Receita criada com sucesso!');
+    }
+
+    public function entradas()
+    {
+        return view('recipes.entradaRecipe');
+    }
 }
